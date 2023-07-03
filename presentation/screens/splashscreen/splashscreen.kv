@@ -1,0 +1,41 @@
+<SplashScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        spacing: root.height * 0.35
+        size_hint_y: .9
+        pos_hint: {'center_y': 0.5}
+        
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint_y: 0.2
+            size_hint_x: 0.35
+            pos_hint: {'center_x': 0.5}
+            spacing: 5
+
+            MDLabel:
+                text: 'Bienvenue sur ALOE'
+                halign: 'center'
+                color:  '#009455'
+                font_size: '28sp' 
+
+            MDProgressBar:
+                id: progress_bar
+                value: 0
+                size_hint: 1, 0.1
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint_y: 0.4
+            spacing: 10
+
+            MDLabel:
+                text: 'Sous l’appui technique et fiancier'
+                color:  '#009455'
+                font_size: '20sp' 
+                halign: 'center'
+
+            Image:
+                source: 'assets/usaid.png'
+                size_hint: 1, 1
+                md_bg_color: "red"
