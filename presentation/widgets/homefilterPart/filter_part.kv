@@ -9,18 +9,31 @@
         MDBoxLayout:
             orientation: 'horizontal'
             pos_hint: {'center_x': 0.5, 'center_y': 0.6}
-            padding: [dp(5), dp(1)]
+            padding: [dp(5),0]
             spacing: 2
             
             MDTextField:
                 radius: [dp(15)]
                 size_hint:  0.2, 0.85
-                icon_left: "mail"
+                icon_left: "eye-off"
                 mode: "fill"
                 hint_text: "Mot clé"
                 icon_right: "eye-off"
                 fill_color_normal: 0, 0.56, 0.33, 0.15
                 fill_color_focus: 0, 0.56, 0.33, 0.15
+
+            MDTextField:
+                id: button
+                radius: [dp(15)]
+                size_hint:  0.2, 0.85
+                icon_left: "format-text"
+                mode: "fill"
+                hint_text: "Thematique"
+                icon_right: "eye-off"
+                fill_color_normal: 0, 0.56, 0.33, 0.15
+                fill_color_focus: 0, 0.56, 0.33, 0.15
+                on_focus: root.show_thematique()
+
 
             MDTextField:
                 radius: [dp(15)]
@@ -32,23 +45,31 @@
                 fill_color_normal: 0, 0.56, 0.33, 0.15
                 fill_color_focus: 0, 0.56, 0.33, 0.15
 
-
-            MDTextField:
+            MDCard:
                 radius: [dp(15)]
+                md_bg_color: '#009455'
                 size_hint:  0.2, 0.85
-                icon_left: "mail"
-                mode: "fill"
-                hint_text: "Mot clé"
-                icon_right: "eye-off"
-                fill_color_normal: 0, 0.56, 0.33, 0.15
-                fill_color_focus: 0, 0.56, 0.33, 0.15
+                pos_hint: {'center_x': .5}
 
-            MDTextButton:
-                text: "Recherche"
-                color: '#009455'
-                size_hint:  0.2, 0.8
-                radius: [dp(15)]
-                
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    padding: [dp(5),0]
+                    spacing: 5
+
+                    MDSwitch:
+                        size_hint: .1, .1
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+                    MDTextButton:
+                        text: "Recherche..."
+                        theme_text_color: "Custom"
+                        text_color: "#ffffff"
+                        bold: True
+                        halign: "center"
+                        size_hint: .5, 1
+             
+                    
 
             
 
