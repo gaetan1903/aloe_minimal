@@ -1,9 +1,40 @@
-<HomeScreen>:
-    BoxLayout:
-        orientation: 'vertical'
-        padding: 20
+#:import CoverPart presentation.widgets.homeCoverPart.cover_part.CoverPart
+#:import DrawerPart presentation.widgets.homedrawerPart.drawer_part.DrawerPart
+#:import FilterPart presentation.widgets.homefilterPart.filter_part.FilterPart
 
-        MDLabel:
-            text: 'Accueil'
-            halign: 'center'
-            theme_text_color: 'Secondary'
+
+<HomeScreen>:
+    MDBoxLayout:
+        orientation: 'horizontal'
+
+        MDBoxLayout:
+            adaptive_width: True
+            width: root.width * .06
+
+            DrawerPart:
+                size_hint: 1, 1
+                md_bg_color: "#009455"
+                radius: [0, 0, 0, 0] 
+
+
+        MDBoxLayout:
+            adaptive_width: True
+            width: root.width * 0.94
+
+            MDBoxLayout:
+                orientation: 'vertical'
+
+                CoverPart:
+                    size_hint: 1, None
+                    size: self.parent.size[0], self.parent.size[1] / 4
+
+                
+                FilterPart:
+                    size_hint: 0.95, 0.15  
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+                MDLabel:
+                    text: "Acceuil"
+                    halign: "center"
+
+            

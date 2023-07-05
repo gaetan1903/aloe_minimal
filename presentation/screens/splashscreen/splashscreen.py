@@ -10,7 +10,7 @@ class SplashScreen(Screen):
 
     def update_progress(self, dt):
         progress_bar = self.manager.get_screen('splash').ids.progress_bar
-        progress_bar.value += 10
+        progress_bar.value += 20
 
         if progress_bar.value >= 100:
             self.manager.current = 'home'

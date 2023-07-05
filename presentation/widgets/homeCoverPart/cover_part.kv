@@ -1,0 +1,30 @@
+#:import effect kivy.uix.effectwidget.EffectWidget
+#:import HorizontalBlurEffect kivy.uix.effectwidget.HorizontalBlurEffect
+#:import VerticalBlurEffect kivy.uix.effectwidget.VerticalBlurEffect
+
+
+<CoverPart>:
+    MDFloatLayout:
+        EffectWidget:
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            effects: (HorizontalBlurEffect(size=5), VerticalBlurEffect(size=40),)
+            FitImage:
+                source: "assets/cover.jpg"
+                size_hint_y: 1
+
+        MDLabel:
+            text: "Renseignez-vous ici !"
+            color:  '#ffffff'
+            bold: True
+            padding: (30, 10)
+            font_size: '48sp'
+            size_hint: (1, None)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+        
+        MDLabel:
+            text: "Les lois environnementales et anticorruption à portée de main."
+            color:  '#ffffff'
+            padding: (30, 5)
+            font_size: '18sp'
+            size_hint: (1, None)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.7}
