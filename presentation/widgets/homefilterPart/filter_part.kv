@@ -1,7 +1,8 @@
 <FilterPart>:
     MDCard:
         shadow_softness: 2
-        shadow_offset: (0, 1)
+        shadow_offset: (1, 1)
+        size_hint: 1, .6
         pos_hint: {'center_x': 0.5, 'center_y': 0.9}
         radius: [dp(15)]
         elevation: 1
@@ -12,38 +13,108 @@
             padding: [dp(5),0]
             spacing: 2
             
-            MDTextField:
+            MDScreen:
                 radius: [dp(15)]
+                md_bg_color: 0, 0.56, 0.33, 0.15
                 size_hint:  0.2, 0.85
-                icon_left: "eye-off"
-                mode: "fill"
-                hint_text: "Mot clé"
-                icon_right: "eye-off"
-                fill_color_normal: 0, 0.56, 0.33, 0.15
-                fill_color_focus: 0, 0.56, 0.33, 0.15
+                pos_hint: {'center_x': .5}
 
-            MDTextField:
-                id: button
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    padding: [dp(10),0]
+                    spacing: 3
+
+                    MDIcon:
+                        icon: "format-text"
+                        theme_text_color: "Custom"
+                        text_color: "#009455"
+                        bold: True
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                     
+
+                    MDTextField:
+                        # radius: [dp(15)]
+                        # mode: "fill"
+                        hint_text: "Mot clé"
+                        # fill_color_normal: 0, 0.56, 0.33, 0.15
+                        fill_color_focus: "#009455"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDIconButton:
+                        icon: "select-remove"
+                        theme_text_color: "Custom"
+                        text_color: "#009455"
+                        bold: True
+                        pos_hint: {"center_x": .5, "center_y": .5}
+        
+                
+
+            MDScreen:
                 radius: [dp(15)]
+                md_bg_color: 0, 0.56, 0.33, 0.15
                 size_hint:  0.2, 0.85
-                icon_left: "format-text"
-                mode: "fill"
-                hint_text: "Thematique"
-                icon_right: "eye-off"
-                fill_color_normal: 0, 0.56, 0.33, 0.15
-                fill_color_focus: 0, 0.56, 0.33, 0.15
-                on_focus: root.show_thematique()
+                pos_hint: {'center_x': .5}
+
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    padding: [dp(10),0]
+                    spacing: 3
+
+                    MDIcon:
+                        icon: "view-dashboard-outline"
+                        theme_text_color: "Custom"
+                        text_color: "#009455"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                     
+
+                    MDTextButton:
+                        text: "Thématique"
+                        custom_color: "grey"
+                        size_hint: .7, 1
+                        pos_hint: {"center_x": .5, "center_y": .5}
 
 
-            MDTextField:
+                    MDIconButton:
+                        icon: "chevron-down"
+                        theme_text_color: "Custom"
+                        text_color: "#009455"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+            
+            MDScreen:
                 radius: [dp(15)]
+                md_bg_color: 0, 0.56, 0.33, 0.15
                 size_hint:  0.2, 0.85
-                icon_left: "mail"
-                mode: "fill"
-                hint_text: "Mot clé"
-                icon_right: "eye-off"
-                fill_color_normal: 0, 0.56, 0.33, 0.15
-                fill_color_focus: 0, 0.56, 0.33, 0.15
+                pos_hint: {'center_x': .5}
+
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    padding: [dp(10),0]
+                    spacing: 3
+
+                    MDIcon:
+                        icon: "book-open-outline"
+                        theme_text_color: "Custom"
+                        text_color: "#009455"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                     
+
+                    MDTextButton:
+                        text: "Type"
+                        custom_color: "grey"
+                        size_hint: .7, 1
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    MDIconButton:
+                        icon: "chevron-down"
+                        theme_text_color: "Custom"
+                        text_color: "#009455"
+                        pos_hint: {"center_x": .5, "center_y": .5}
 
             MDCard:
                 radius: [dp(15)]
@@ -54,8 +125,8 @@
                 MDBoxLayout:
                     orientation: 'horizontal'
                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                    padding: [dp(5),0]
-                    spacing: 5
+                    padding: [dp(10),0]
+                    spacing: 3
 
                     MDSwitch:
                         size_hint: .1, .1
@@ -71,6 +142,56 @@
              
                     
 
-            
+    MDScreen:
+        size_hint: 1, .4
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+
+        MDBoxLayout:
+            orientation: 'horizontal'
+            pos_hint: {'center_y': 0.5}
+            padding: [dp(10),0]
+
+            MDLabel:
+                text: "Categorie:"
+                color: "grey"
+                size_hint: .1, 1
+                pos_hint: {'center_y': 0.5}
+                
+            MDScrollView:
+                size_hint: .9, 1
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    pos_hint: {'center_x': 0, 'center_y': 0.5}
+                    spacing: 5
+                    
+                    MDRoundFlatIconButton:
+                        text: "Convention et relations internationaux"
+                        icon: "checkbox-marked-circle-outline"
+                        md_bg_color: 0, 0.56, 0.33, 0.15
+                        text_color: "#009455"
+                        size_hint_y: 0.65
+                        pos_hint: {'center_y': 0.5}
+
+                    MDRoundFlatButton:
+                        text: "Reglement general"
+                        text_color: "#000000"
+                        pos_hint: {'center_y': 0.5}
+                        size_hint_y:  0.65
+                    
+                    MDRoundFlatButton:
+                        text: "Contrat internationnal"
+                        text_color: "#000000"
+                        pos_hint: {'center_y': 0.5}
+                        size_hint_y:  0.65
+
+                    MDRoundFlatButton:
+                        text: "Texte de procedure"
+                        text_color: "#000000"
+                        pos_hint: {'center_y': 0.5}
+                        size_hint_y:  0.65
+
+
+
+
 
 
