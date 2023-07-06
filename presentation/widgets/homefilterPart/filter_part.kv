@@ -34,12 +34,12 @@
                      
 
                     MDTextField:
-                        # radius: [dp(15)]
-                        # mode: "fill"
                         hint_text: "Mot clé"
-                        # fill_color_normal: 0, 0.56, 0.33, 0.15
+                        active_line: False
+                        line: False
                         fill_color_focus: "#009455"
                         pos_hint: {"center_x": .5, "center_y": .5}
+                        line_color_normal: 0, 0.56, 0.33, 0.15
 
 
                     MDIconButton:
@@ -70,11 +70,12 @@
                         pos_hint: {"center_x": .5, "center_y": .5}
                      
 
-                    MDTextButton:
+                    MDFlatButton:
                         text: "Thématique"
-                        custom_color: "grey"
+                        theme_text_color: "Custom"
+                        text_color: "#606764"
                         size_hint: .7, 1
-                        pos_hint: {"center_x": .5, "center_y": .5}
+                        pos_hint: {"center_y": .5}
 
 
                     MDIconButton:
@@ -103,11 +104,12 @@
                         pos_hint: {"center_x": .5, "center_y": .5}
                      
 
-                    MDTextButton:
+                    MDFlatButton:
                         text: "Type"
-                        custom_color: "grey"
+                        theme_text_color: "Custom"
+                        text_color: "#606764"
                         size_hint: .7, 1
-                        pos_hint: {"center_x": .5, "center_y": .5}
+                        pos_hint: {"center_y": .5}
 
 
                     MDIconButton:
@@ -133,7 +135,7 @@
                         pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
                     MDTextButton:
-                        text: "Recherche..."
+                        text: "Rechercher..."
                         theme_text_color: "Custom"
                         text_color: "#ffffff"
                         bold: True
@@ -154,6 +156,7 @@
             MDLabel:
                 text: "Categorie:"
                 color: "grey"
+                font_size: "14sp"
                 size_hint: .1, 1
                 pos_hint: {'center_y': 0.5}
                 
@@ -166,7 +169,7 @@
                     
                     MDRoundFlatIconButton:
                         text: "Convention et relations internationaux"
-                        icon: "checkbox-marked-circle-outline"
+                        icon: "check"
                         md_bg_color: 0, 0.56, 0.33, 0.15
                         text_color: "#009455"
                         size_hint_y: 0.65
@@ -174,19 +177,19 @@
 
                     MDRoundFlatButton:
                         text: "Reglement general"
-                        text_color: "#000000"
+                        text_color: "#606764"
                         pos_hint: {'center_y': 0.5}
                         size_hint_y:  0.65
                     
                     MDRoundFlatButton:
                         text: "Contrat internationnal"
-                        text_color: "#000000"
+                        text_color: "#606764"
                         pos_hint: {'center_y': 0.5}
                         size_hint_y:  0.65
 
                     MDRoundFlatButton:
                         text: "Texte de procedure"
-                        text_color: "#000000"
+                        text_color: "#606764"
                         pos_hint: {'center_y': 0.5}
                         size_hint_y:  0.65
 

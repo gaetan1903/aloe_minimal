@@ -1,7 +1,9 @@
 #:import CoverPart presentation.widgets.homeCoverPart.cover_part.CoverPart
 #:import DrawerPart presentation.widgets.homedrawerPart.drawer_part.DrawerPart
 #:import FilterPart presentation.widgets.homefilterPart.filter_part.FilterPart
+#:import Tab presentation.widgets.tabs
 
+   
 
 <HomeScreen>:
     MDBoxLayout:
@@ -27,15 +29,33 @@
                 CoverPart:
                     size_hint: 1, None
                     size: self.parent.size[0], self.parent.size[1] / 4
-
     
                 FilterPart:
                     size_hint: 0.95, 0.25
                     spacing: 1
                     pos_hint: {'center_x': 0.5}
 
-                MDLabel:
-                    text: "Acceuil"
-                    halign: "center"
+                MDBoxLayout:
+                    size_hint: 0.95, 1
+                    pos_hint: {'center_x': 0.5}
+                    MDCard:
+                        size_hint: 1, 0.95
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                        MDTabs:
+                            radius: [dp(15), dp(15), dp(0), dp(0)]
+                            background_color: 'white'
+                            text_color_active: 'black'
+                            text_color_normal: 'grey'
+                            indicator_color: "#009455"
+
+                            Tab:
+                                icon: 'account'
+                                title: 'Tous'
+                                content_text: 'Ici se trouvera la liste de tous'
+                                radius: [dp(15)]
+                            Tab:
+                                title: 'Favoris'
+                                icon: 'bookmark-check'
+                                content_text: 'Ici sont les favoris'
 
             

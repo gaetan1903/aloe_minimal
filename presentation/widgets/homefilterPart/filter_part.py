@@ -1,5 +1,4 @@
 from kivymd.uix.floatlayout import MDFloatLayout
-    
 from kivy.lang import Builder
 
 

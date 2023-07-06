@@ -9,6 +9,7 @@ from presentation.screens.splashscreen.splashscreen import SplashScreen
 class MainApp(MDApp):
     def build(self):
         self.theme_cls.primary_palette = "Green"
+        self.theme_cls.theme_style = "Light"
         self.theme_cls.font_name = 'Product Sans'
         Window.size = (1280, 744)
         Window.title = "Accès sur les Lois Environnement" 
